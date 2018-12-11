@@ -11,12 +11,9 @@ import {
 import RRHomeContainer from 'Container/RRHomeContainer';
 let {subscribe, getState, dispatch} = Store;
 let appContainer = document.querySelector('#app');
-
-let App = () =>
-  ReactDOM.render(
+ReactDOM.render(
     <Provider store={Store}>
     <RRHomeContainer/>
     </Provider>,
-    appContainer);
-subscribe(App);
-App();
+    appContainer
+);
